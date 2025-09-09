@@ -25,9 +25,8 @@ If you propose a change to metadata kernels, PID policy, or retention rules:
 
 - `README.md` → Overview and change request process  
 - `/workflow/metadata-change.md` → 7-step metadata schema change workflow  
-- `/policies/pid-policy.md` → When to use Handles vs DOIs  
-- `/policies/handle-record-profile.md` → Required and optional PID attributes  
-- `/policies/tombstoning-policy.md` → Rule for withdrawn objects  
+- `/policies/pid-policy.md` →  When to use Handles vs DOIs, versioning rules
+- `/policies/handle-record-profile.md` → Required and optional PID attributes   
 - `/retention/playbook.md` → Retention rules per data type  
 - `/log/decision-log.md` → Record of approved governance changes  
 
