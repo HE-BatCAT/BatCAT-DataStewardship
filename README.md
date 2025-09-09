@@ -9,7 +9,7 @@ It documents:
 - Retention and deletion rules (including tombstoning)
 - Decision log of approved changes
 
-The purpose is to provide **simple, practical, tool-agnostic rules** that align with community recommendations (FAIR, EMMC, RDA) while being flexible for partners’ systems.
+The purpose is to provide **simple and practical rules** that align with community recommendations (FAIR, EMMC, RDA) while being flexible for partners’ systems.
 
 ## How to Request a Change
 
