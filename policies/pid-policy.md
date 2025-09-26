@@ -34,7 +34,9 @@ A valid BatCAT Handle record **MUST** include:
 **Recommended (if applicable):** `dateModified` (ISO 8601) and qualified provenance links (PROV-O) such as `wasRevisionOf`, `wasDerivedFrom`, `hadPrimarySource`, `alternateOf`.
 
 ## Source of truth & allowed types
-The platform/landing metadata is the **single source of truth**. `0.TYPE` in the Handle record is **derived from the metadata** .
+The platform/landing metadata is the **single source of truth**. Type value (0.TYPE). The object type is maintained in the authoritative metadata (LinkAhead) and is copied verbatim into the Handle record as 0.TYPE.
+For v0.1, 0.TYPE is a text label (string) and MUST match the LinkAhead record’s type field exactly.
+If the consortium later publishes a type vocabulary (e.g., SKOS with IRIs), 0.TYPE MAY be expressed as an IRI with a backward-compatible mapping.
 
 ## Versioning (and referencing parts)
 BatCAT uses a **flexible, context-dependent** approach:
