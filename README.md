@@ -24,11 +24,15 @@ If you propose a change to metadata kernels, PID policy, or retention rules:
 ## Repository Structure
 
 - `README.md` → Overview and change request process  
-- `/workflow/metadata-change.md` → 7-step metadata schema change workflow  
-- `/policies/pid-policy.md` →  When to use Handles vs DOIs, versioning rules
-- `/policies/handle-record-profile.md` → Required and optional PID attributes   
-- `/retention/playbook.md` → Retention rules per data type  
-- `/log/decision-log.md` → Record of approved governance changes  
+- `kernels/landing-kernel-v0.1.md` → Minimum metadata kernel  
+- `kernels/landing-kernel-v0.1.yaml` → Minimum metadata kernel 
+- `workflow/metadata-change.md` → 7-step metadata schema change workflow  
+- `policies/pid-policy.md` → PID & landing-page policy (tombstoning, versioning, minimal kernel)  
+- `policies/handle-record-profile.md` → BatCAT Handle Record Profile (required PID attributes)  
+- `retention/playbook.md` → Retention rules per data type  
+- `log/decision-log.md` → Record of approved governance changes
+
+
 
 
 This space is **open for partner input**. Contributions are welcome via pull requests or issues.
