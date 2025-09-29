@@ -1,0 +1,87 @@
+# BatCAT Minimum metadata Kernel (v0.1)
+# Machine-readable list of minimum fields for landing pages that PIDs resolve to.
+# Grounded in community recommendations: DCAT, DCMI Terms (dct), PROV-O, SPDX.
+
+id: batcat-metadata-kernel
+version: v0.1
+status: draft
+updated: "2025-09-29"
+
+vocab_prefixes:
+  dct: "http://purl.org/dc/terms/"
+  dcat: "http://www.w3.org/ns/dcat#"
+  prov: "http://www.w3.org/ns/prov#"
+
+required:
+  - title
+  - creator
+  - dateCreated
+  - version
+  - license
+  - landingPage
+  - identifiers
+
+recommended:
+  - description
+  - related
+  - provenance
+
+fields:
+  title:
+    purpose: "Human-readable name of the object."
+    rdf_term: "dct:title"
+    cardinality: "1..1"
+
+  creator:
+    purpose: "Person/organisation responsible (use ORCID/ROR when available)."
+    rdf_term: "dct:creator"
+    cardinality: "1..n"
+
+  dateCreated:
+    purpose: "Creation/issue date (ISO 8601)."
+    rdf_term: "dct:issued"
+    cardinality: "1..1"
+
+  version:
+    purpose: "Ordered version string for citation (e.g., 1.0.0)."
+    rdf_term: "dct:hasVersion"
+    cardinality: "1..1"
+
+  license:
+    purpose: "Licence identifier (SPDX IRI preferred, e.g., https://spdx.org/licenses/CC-BY-4.0)."
+    rdf_term: "dct:license"
+    cardinality: "1..1"
+
+  landingPage:
+    purpose: "Stable HTTPS URL of this human-readable page."
+    rdf_term: "dcat:landingPage"
+    cardinality: "1..1"
+
+  identifiers:
+    purpose: "List of identifiers; include a persistent identifier (e.g., Handle) where available."
+    rdf_term: "dct:identifier"
+    cardinality: "1..n"
+
+  description:
+    purpose: "Brief summary to aid discovery and reuse."
+    rdf_term: "dct:description"
+    cardinality: "0..1"
+
+  related:
+    purpose: "Links to related objects (e.g., previous/next versions, inputs/outputs)."
+    rdf_terms:
+      - "prov:wasRevisionOf"
+      - "prov:wasDerivedFrom"
+      - "prov:hadPrimarySource"
+      - "dct:relation"
+    cardinality: "0..n"
+
+  provenance:
+    purpose: "Key provenance statements (qualified where applicable)."
+    rdf_term: "prov:*"
+    cardinality: "0..1"
+
+notes:
+  - "Landing page holds the authoritative (rich) metadata; the Handle record stays minimal."
+  - "Terms align with DCAT, DCMI Terms (dct), PROV-O, SPDX as cited in the deliverable."
+  - "Changes follow the metadata-change workflow and are logged."
